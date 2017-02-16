@@ -1,0 +1,28 @@
+{
+  "name": "docker-registry-api",
+  "version": "0.0.0",
+  "description": "a node wrapper for working with a local instance of the docker registry api",
+  "main": "module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liaodrake/docker-registry-api.git"
+  },
+  "keywords": [
+    "docker",
+    "docker-registry"
+  ],
+  "author": "Christopher Vachon <code@christophervachon.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liaodrake/docker-registry-api/issues"
+  },
+  "homepage": "https://github.com/liaodrake/docker-registry-api#readme",
+  "dependencies": {
+    "base64-min": "^1.2.0",
+    "extend": "^3.0.0",
+    "got": "^6.7.1"
+  }
+}
