@@ -11,7 +11,9 @@ module.exports = function dockerRegistryAPI(options) {
         baseURL: "",
         port: 5000,
         timeout: 15000,
-        verbose: false
+        verbose: false,
+        rejectUnauthorized: true,
+        requestCert: true
     }, options);
     _this.callAPI = function(path, queryObject, method) {
         var encodedAuth = base64.encode(`${_settings.user}:${_settings.password}`);
@@ -24,7 +26,9 @@ module.exports = function dockerRegistryAPI(options) {
             method: method || "GET",
             query: queryObject,
             json: true,
-            timeout: _settings.timeout
+            timeout: _settings.timeout,
+            rejectUnauthorized: _settings.rejectUnauthorized,
+            requestCert: _settings.requestCert,
         }).then(function(response) {
             _this.log(`Request [${fullURL}] Completed with [${response.statusCode}]`);
             return response;
